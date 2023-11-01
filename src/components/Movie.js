@@ -3,12 +3,12 @@ import { useParams, useHistory } from 'react-router-dom';
 import {connect} from 'react-redux';
 import reducer from '../reducers/movieReducer';
 import { deleteMovie } from '../actions/movieActions';
-
+import favoritesReducer from '../reducers/favoritesReducer';
 const Movie = (props) => {
     const { id } = useParams();
     const { push } = useHistory();
 
-    const {movies,deleteMovie} = props;
+    const {movies,deleteMovie, displayfavorites} = props;
     const movie = movies.find(movie=>movie.id===Number(id));
 
     const handleDeleteMovie = () =>{
@@ -56,6 +56,7 @@ const Movie = (props) => {
 }
 const mapStateToProps = state =>{
     return({
+        displayfavorites: state.favoritesReducer.displayfavorites,
         movies: state.movieReducer.movies
     })
 }
