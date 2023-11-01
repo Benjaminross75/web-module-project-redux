@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
-//import reducer from '../reducers/movieReducer';
+import reducer from '../reducers/movieReducer';
 const MovieHeader = (props) => {
     const {appTitle} = props;
     const displayFavorites = true;

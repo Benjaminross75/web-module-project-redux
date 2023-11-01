@@ -4,6 +4,7 @@ import MovieListItem from './MovieListItem';
 import MovieFooter from './MovieFooter';
 import {connect} from 'react-redux'
 import reducer from '../reducers/movieReducer';
+
 const MovieList = (props)=> {
     const {movies} = props;
 
