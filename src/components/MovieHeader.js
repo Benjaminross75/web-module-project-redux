@@ -8,7 +8,7 @@ const MovieHeader = (props) => {
     const {appTitle, displayFavorites, toggleFavorites} = props;
 
 const handleFavorites = () =>{
-    console.log('here')
+ 
     toggleFavorites()
 }
     return(<div className="table-title">
